@@ -1,1 +1,39 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Chathura&display=swap");
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: "Chathura", sans-serif;
+}
+
+.container {
+  height: 100vh;
+}
+
+.container .img {
+  background: url("../bg.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+.container .content {
+  position: absolute;
+  z-index: 1;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.container .content h1 {
+  font-size: 4rem;
+  position: absolute;
+}
+/*# sourceMappingURL=index.css.map */
