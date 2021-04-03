@@ -12,8 +12,16 @@ body {
   font-family: "Chathura", sans-serif;
 }
 
+// body:hover .container {
+//   clip-path: polygon(15% 15%, 85% 15%, 85% 85%, 15% 85%);
+// }
+
 .container {
   height: 100vh;
+  position: absolute;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  transition: clip-path 1s;
+  width: 100%;
 
   .img {
     background: url("../bg.jpg");

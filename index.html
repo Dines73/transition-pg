@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Transition</title>
     <link rel="stylesheet" href="css/index.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+      integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="container">
@@ -14,5 +19,14 @@
       </div>
       <div class="img"></div>
     </div>
+    <script>
+      const timeline = gsap.timeline({ paused: true });
+      const container = document.querySelector(".container");
+      timeline.to(container, { clipPath: "polygon(15% 15%, 85% 15%, 85% 85%, 15% 85%)" });
+      timeline.to(container, { clipPath: "polygon(91% 8%, 91% 8%, 91% 91%, 91% 91%)" }, "+=1");
+      container.addEventListener("mouseover", () => {
+        timeline.play();
+      });
+    </script>
   </body>
 </html>
